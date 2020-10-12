@@ -22,7 +22,7 @@ class SongList extends Component {
                 </div>
             )
         })
-    }
+    };
     render() {
         return (
             <div className="ui divided list">

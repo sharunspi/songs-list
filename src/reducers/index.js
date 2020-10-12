@@ -1,23 +1,28 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 
 const songsReducer = ()=>{
     return [
         {
             title:'La la la',
-            duration:'4.02'
+            duration:'4:02'
         },
         {
             title:'saminamana',
-            duration:'3.02'
+            duration:'3:02'
         }
-    ]
-}
+        ,
+        {
+            title:'hoai hoi ',
+            duration:'3:18'
+        }
+    ];
+};
 const selectedSongReducer = (selectedSong=null,action)=>{
-    if(action.typ==='SONG_SELECTED'){
-        return action.payload
+    if(action.type === 'SONG_SELECTED'){
+        return action.payload;
     }
-    return selectedSong
+    return selectedSong;
 }
 export default combineReducers({
     songs:songsReducer,
